@@ -20,7 +20,7 @@ func unmaskText(s string) string {
 }
 
 func IsProfane(s string) bool {
-  unmasked := unmaskText(s)
+  unmasked := unmaskText(strings.ToLower(s))
   hits := stringMatcher.Match([]byte(unmasked))
   for _, hit := range hits {
     println(" ", hit)
@@ -29,9 +29,11 @@ func IsProfane(s string) bool {
 }
 
 func Censor(s string) string {
+  unmasked := unmaskText(strings.ToLower(s))
   return ""
 }
 
 func ExtractProfanity(s string) []string {
+  unmasked := unmaskText(strings.ToLower(s))
   return []string{}
 }
