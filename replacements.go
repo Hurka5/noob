@@ -1,10 +1,10 @@
 package noob
 
 func lookupReplacement(r rune) rune {
-  if val, ok := replacements[r]; ok {
-    return val
-  }
-  return r
+	if val, ok := replacements[r]; ok {
+		return val
+	}
+	return r
 }
 
 var replacements = map[rune]rune{
@@ -20,5 +20,5 @@ var replacements = map[rune]rune{
 	'#': 'h',
 	'@': 'a',
 	'<': 'c',
-  'Ł': 'l',
+	'Ł': 'l',
 }
